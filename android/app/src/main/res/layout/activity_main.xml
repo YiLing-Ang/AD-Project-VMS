@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/main_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/roomListHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Facilities"
+                    android:padding="10dp"
+                    android:background="#EF7C00"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Available Rooms"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="#EF7C00"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/roomListHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <ListView
+                android:id="@+id/listViewMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="95"
+                android:divider="@color/white"
+                android:background="@color/white"/>
+            <TextView
+                android:id="@+id/blankViewText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textSize="20sp"
+                android:text="No rooms available"
+                android:visibility="gone">
+            </TextView>
+
+        </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bordertopbottomblue">
+<LinearLayout
+    android:id="@+id/bookingDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/bookingHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="No Upcoming Booking"
+        android:textColor="#003062"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@+id/bookingDetails"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+
+                        <TextView
+                            android:id="@+id/bookingRoom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:layout_weight="0.25"
+                            android:text="Room name:"
+                            android:textStyle="italic"/>
+
+                        <TextView
+                            android:id="@+id/bookingDateTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:layout_weight="0.25"
+                            android:text="Date/Time:"
+                            android:textStyle="italic"/>
+
+                        <TextView
+                            android:id="@+id/bookingTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:layout_weight="0.25"
+                            android:text="Duration:"
+                            android:textStyle="italic"/>
+
+                        <TextView
+                            android:id="@+id/bookingDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:layout_weight="0.25"
+                            android:text="Checked In:"
+                            android:textStyle="italic"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/bookingRoomValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_weight="0.25"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/bookingDateTimeValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_weight="0.25"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/bookingDurationValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_weight="0.25"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/bookingCheckInImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_weight="0.25"
+                            android:text="-" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/btnCreateBooking"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:drawableLeft="@drawable/ic_booking24"
+                android:text="Create Booking"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnViewBooking"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/btnCreateBooking"
+                android:layout_marginLeft="30dp"
+                android:drawableLeft="@drawable/ic_booking2_24"
+                android:text="Booking History"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/btnCheckIn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+
+                android:drawableLeft="@drawable/ic_checkin_24"
+                android:text="Check In"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnTimeExtension"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/btnCheckIn"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:drawableLeft="@drawable/ic_time_24"
+                android:text="Time Extension"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <include layout="@layout/main_nav_drawer" />
+
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

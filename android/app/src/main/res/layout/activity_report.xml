@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".ReportActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_toolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgReport"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="25dp"
+                android:src="@drawable/ic_baseline_report_24"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/btnCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Take a picture"
+                android:drawableLeft="@drawable/ic_camera_24"
+                android:layout_below="@id/imgReport" />
+
+
+            <TextView
+                android:id="@+id/textType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnCamera"
+                android:layout_marginBottom="10dp"
+                android:text="Select type of misuse"
+                android:gravity="center"/>
+
+            <Spinner
+                android:id="@+id/spinnerMisuse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textType"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <EditText
+                android:id="@+id/reportDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerMisuse"
+                android:hint="Enter details of report"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:drawableLeft="@drawable/ic_next_24"
+                android:layout_centerHorizontal="true"
+               android:layout_below="@id/reportDetails" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        >
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

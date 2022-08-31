@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".ViewBookingActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/main_toolbar"/>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".TimeExtensionActivity">
+
+            <Button
+                android:id="@+id/btn1hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:text="1 hour" />
+
+            <Button
+                android:id="@+id/btn2hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 hours"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/btn1hour"/>
+
+            <Button
+                android:id="@+id/btn3hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 hours"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:textAllCaps="false"
+                android:layout_below="@+id/btn2hour"/>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:drawableLeft="@drawable/ic_next_24"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="100dp" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        >
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
