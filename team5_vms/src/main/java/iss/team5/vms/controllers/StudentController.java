@@ -385,6 +385,7 @@ public class StudentController {
 		rs.createReport(newReport);
 		if (newReport.getCategory().equals(ReportCategory.HOGGING)) {
 			if (bs.predictHogging(fileName)) {
+				newReport.setReportStatus(ReportStatus.APPROVED);
 				rs.approveReportScoring(newReport);
 			}
 			else
