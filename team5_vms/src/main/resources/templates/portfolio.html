@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Team 5 VMS</title>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+	<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/bootstrap/js/popper.min.js"></script>
+	<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/bootstrap/js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+		integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+	<style type="text/css">
+		img {
+  width: 100%;
+}
+		.container-fluid {
+			padding: 60px 50px;
+		}
+
+		.mylink a {
+			text-decoration: none;
+			color: white;
+			background-color: #003062;
+		}
+
+		.mylink a:hover {
+			color: #003062;
+			background-color: white;
+			border-color: #003062;
+		}
+
+		.btnorange {
+			background-color: #F27C36;
+			color: white;
+		}
+
+		.btnorange:hover {
+			background-color: white;
+			color: #F27C36;
+			border-color: #F27C36;
+		}
+
+		html {
+			position: relative;
+			min-height: 100%;
+		}
+
+		body {
+			margin-bottom: 100px;
+		}
+
+		footer {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 56px;
+		}
+	</style>
+</head>
+<head th:replace="fragments/general.html :: headerfiles" />
+
+<body>
+	
+		<div class="container-fluid text-center">
+
+		
+	
+	<header>
+        <h1>Venue Management System (VMS) Portfolio</h1>
+    </header>
+    <section id="project-description">
+        <i class='fas fa-book-reader' style='font-size:36px; color:#003062'></i>
+		<h2>Project Description</h2>
+        <p>
+            The Venue Management System (VMS) is a dynamic platform designed for efficient room and facility management within educational institutions. Leveraging predictive analytics for peak periods and machine learning to detect booking anomalies, VMS offers advanced features to enhance the booking experience for students and streamline administrative tasks.
+        </p>
+    </section>
+	
+    <section id="role-and-responsibilities">
+		<i class="fas fa-user-alt" style='font-size:36px; color:#003062'></i>
+        <h2>My Role and Responsibilities</h2>
+		<p>As a developer in the VMS project, I played a pivotal role in designing and implementing key features that significantly enhanced the user experience and streamlined administrative processes:</p>
+        <ul>
+            <li><strong>Booking System Enhancement:</strong> I designed and developed features that improved the room booking process, allowing users to find and book rooms with ease while optimizing resource allocation.</li>
+            <li><strong>Predictive Analytics:</strong> Leveraging my expertise in predictive analytics, I implemented a solution that accurately forecasts peak periods, ensuring efficient room utilization and improved user satisfaction.</li>
+            <li><strong>Machine Learning for Anomaly Detection:</strong> I employed machine learning techniques to detect booking anomalies, addressing room hogging issues and ensuring a fair allocation of resources.</li>
+            <li><strong>Admin Dashboard Development:</strong> I played a pivotal role in designing and developing an intuitive dashboard page tailored for admin users. This dashboard provided real-time insights into booking data, reports, and room utilization, enabling informed decision-making and efficient resource management.</li>
+        </ul>
+        <p>My contributions to the VMS project not only improved its functionality but also contributed to its effectiveness in addressing real-world challenges faced by educational institutions.</p>
+    
+    </section>
+	
+    <section id="features-highlights">
+		<i class='fas fa-book' style='font-size:36px; color:#003062'></i>
+        <h2>Key Features and Highlights</h2>
+        <ul>
+            <li><strong>Administrative Control:</strong> Administrators enjoy comprehensive control over user accounts, rooms, and bookings, supported by automated management processes.</li>
+			<li><strong>Smart Booking:</strong>  Users can easily book rooms with facilities that match their requirements, optimizing resource allocation.</li>
+			<li><strong>Predictive Analytics:</strong>  Users can easily book rooms with facilities that match their requirements, optimizing resource allocation.</li>
+			<li><strong>Machine Learning:</strong>  The system employs machine learning algorithms to detect booking anomalies, addressing issues like room hogging.</li>
+			<li><strong>Effortless Check-In:</strong> Each booking generates a unique QR code for seamless check-in at room displays.</li>
+			<li><strong>Extensions: </strong> Users can request one-hour booking extensions based on real-time room availability.</li>
+            <li><strong>Automated Notifications: </strong>The system sends automated email notifications, including account creation confirmations, admin-initiated cancellations, and report approvals impacting user demerit points.</li>
+            <li><strong>Admin Dashboard: </strong>Administrators access a powerful dashboard for real-time insights into bookings, reports, and room utilization data.</li>
+        </ul>
+    </section>
+	
+    <section id="technologies-used">
+		<i class="fas fa-chart-line" style='font-size:36px; color:#003062'></i>
+        <h2>Technologies Used</h2>
+        <ul>
+			<li>Programming Languages: Java, Python</li>
+			<li>Frontend Framework: React</li>
+			<li>Frameworks: Spring Boot, TensorFlow</li>
+			<li>Database: MySQL</li>
+			<li>Tools and Libraries: scikit-learn, Pandas</li>
+		</ul>
+		<h2>Machine Learning Integration</h2>
+		<ul>
+			<li>Used Python for machine learning implementations</li>
+			<li>Integrated machine learning models with Flask for real-time predictions</li>
+			<li>Utilized OpenCV (cv2) for image processing</li>
+			<li>Worked with pandas, numpy, scikit-learn for data processing and model building</li>
+			<li>Implemented a RandomForestClassifier for classification tasks</li>
+		</ul>
+    </section>
+    <section id="project-screenshots">
+        <h2>Project Screenshots</h2>
+		<i class='fas fa-edit' style='font-size:36px; color:#003062'></i>
+        <p>
+            Highlight key screens such as the booking system, peak period predictions, and machine learning reports.
+        </p>
+        <div style="display: flex; justify-content: center;">
+			<img src="img/booking.jpg" alt="Booking System" style="width: 100%;height:70%;">
+		  </div>
+		
+		<p  style="text-align: center;">Caption: Booking System </p>
+		<br/>
+		<div style="display: flex; justify-content: center;">
+			<img src="img/Hogging_email.jpg" alt="Machine Learning Anomaly Detection" style="width: 50%;height:600px;">
+		  </div>
+		
+		<p  style="text-align: center;">Caption: Machine Learning Anomaly Detection</p>
+		<br/>
+        <div style="display: flex; justify-content: center;">
+			<img src="img/Dashboard.jpg" alt="Peak Period Prediction" style="width: 80%; max-height: 600px;">
+		  </div>
+        <p  style="text-align: center;">Caption: Peak Period Prediction</p>
+    </section>
+    <section id="project-demo">
+        <h2>Project Demo</h2>
+		<i class='fas fa-video' style='font-size:36px; color:#003062'></i>
+		<br/>
+        <a href="https://drive.google.com/uc?id=1fShnaeYG5ILDGjWrhCsOyIyJZLe_PTKm&export=download" target="_blank">View Demo</a>
+    </section>
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            In summary, the portfolio showcases the successful development of the Venue Management System (VMS), featuring advanced functionalities like predictive analytics and machine learning for anomaly detection. Challenges were encountered, such as selecting the appropriate library for human detection, but lessons were learned, emphasizing the importance of seeking assistance when needed. The project was executed meticulously, following a structured CICD process, with consistent communication and updates to the team, ensuring efficient collaboration.
+        </p>
+    </section>
+	<footer class="page-footer">
+		<div class="footer-copyright text-center py-3" style="color:white; background-color: #003062">
+			VMS Copyright &copy; 2022
+		</div>
+	</footer>
+</div>
+</body>
+<script>
+	$("#bookings").on('click', function () {
+		location.href = "http://localhost:3000/admin/bookings";
+	});
+	$("#reports").on('click', function () {
+		location.href = "http://localhost:3000/admin/reports";
+	});
+</script>
+
+</html>
